@@ -16,14 +16,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtTitle.isEnabled = false
-        txtCompleted.isEnabled = false
         
     }
     
     
     @IBAction func searchId(_ sender: Any) {
-        doHttpGet(urlPath: " https://jsonplaceholder.typicode.com/todos/\(txtId.text!)")
+        doHttpGet(urlPath: "https://jsonplaceholder.typicode.com/todos/\(txtId.text ?? "1")")
     }
     
     
@@ -39,17 +37,18 @@ class ViewController: UIViewController {
                     do {
                         
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                        let jsondata = json?["data"] as? [String:Any]
+                        //let jsondata = json?["data"] as? [String:Any]
                         
-                        for item in jsondata!{
+                        for item in json!{
                             print(item.value)
                             if item.key == "title"{
                                 self.txtTitle.text = item.value as? String
                                 
                             }
                             else if item.key == "completed"{
-                                self.txtCompleted.text = item.value as? String
-                            }
+                                let completed = item.value as? Bool
+                                self.txtCompleted.text = completed ?? false ? "true": "false"
+                             }
                             
                         }
                         
