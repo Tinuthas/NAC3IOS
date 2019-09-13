@@ -40,8 +40,8 @@
                                     <action selector="addNewAnotation:" destination="zTJ-tC-JXM" eventType="touchUpInside" id="i7L-KA-FAW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="200000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdK-nG-7ei">
-                                <rect key="frame" x="20" y="103" width="374" height="612"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvH-yD-0uu">
+                                <rect key="frame" x="38" y="92" width="350" height="610"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -53,7 +53,7 @@
                     </view>
                     <connections>
                         <outlet property="txtAnotation" destination="gTF-lG-0Cm" id="JKU-Zu-J9H"/>
-                        <outlet property="txtInput" destination="DdK-nG-7ei" id="DFV-ks-VhU"/>
+                        <outlet property="txtInput" destination="YvH-yD-0uu" id="nBG-P3-YaF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ap-b9-X32" sceneMemberID="firstResponder"/>

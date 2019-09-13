@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    
     @IBOutlet weak var txtInput: UILabel!
     
     @IBOutlet weak var txtAnotation: UITextField!
@@ -44,7 +43,7 @@ class ViewController: UIViewController{
             text += item
             text += "\n"
         }
-        //txtInput.text = text
+        txtInput.text = text
     }
     
     
